@@ -17,9 +17,6 @@ source $ZSH/oh-my-zsh.sh
 
 # ----- AVERY CONFIG -----
 
-# Remove user in prompt
-export DEFAULT_USER="$(whoami)"
-
 # ----- pyenv -----
 
 export PYENV_ROOT="$HOME/.pyenv"
