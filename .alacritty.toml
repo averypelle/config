@@ -18,6 +18,7 @@ style = { blinking = "On" }
 transparent_background_colors = true
 
 # Colors (Mariana)
+# Taken from https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/alacritty/Mariana.toml
 
 [colors.bright]
 black = '#333333'
