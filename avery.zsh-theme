@@ -14,9 +14,9 @@ virtual_env_prompt() {
 }
 
 # Construct the prompt
-PS1="\$(virtual_env_prompt)"
+PS1="\$(virtual_env_prompt) "
 PS1+="${fg[blue]}%~" # current directory
-PS1+="\$(git_prompt_info)"
+PS1+="\$(git_prompt_info) "
 PS1+="${fg[cyan]}%(!.#.»)" # prompt character
 PS1+="%{$reset_color%} "
 
