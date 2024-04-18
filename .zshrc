@@ -52,5 +52,3 @@ alias ca="git commit --amend --no-edit"
 alias gcm="git checkout main"
 alias stat="git status"
 alias py="pipenv run"
-
-alias mount_ssd="sudo mkdir /Volumes/ssd && sudo /sbin/mount_exfat /dev/disk4s2 /Volumes/ssd/"
