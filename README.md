@@ -4,17 +4,12 @@ This repo contains configurations that should be put into your home directory
 
 ## Dependencies
 
-This repo depends on the following dependencies being installed
+This repo depends on the following tools being installed on your system
 
 - git
 - zsh
 - oh-my-zsh
 - alacritty
-- nvm
-- node
-- pyenv
-- pipenv
-- python
 
 ## To install
 
