@@ -23,3 +23,9 @@ Run the following commands
 ```bash
 ./sync.sh
 ```
+
+## Worth it
+
+Here is an image of the terminal after the configurations have been applied
+
+![terminal](./terminal.png)
