@@ -1,6 +1,6 @@
-# Config
+# Avery's Shell Config
 
-This repo contains configurations that should be put into your home directory
+This repo contains my default shell configuration. It exists so that I can easily replicate my preferences onto a new system and keep computers in sync. These files belong in your home directory.
 
 ## Dependencies
 
