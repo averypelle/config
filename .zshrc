@@ -1,3 +1,13 @@
+# ----- AVERY'S MAC TERMINAL CONFIG -----
+
+# Remove user in prompt
+export DEFAULT_USER="$(whoami)"
+
+# Set locale
+export LANG=en_US.UTF-8
+
+# ----- oh-my-zsh -----
+
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -14,7 +24,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# ----- AVERY CONFIG -----
+# ----- pipenv -----
+
+# Add pipenv to PATH
+export PATH=$HOME/.local/bin:$PATH
 
 # ----- pyenv -----
 
