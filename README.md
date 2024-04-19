@@ -47,19 +47,30 @@ Here is an image of the terminal after the configurations have been applied
 xcode-select --install
 ```
 
-3. Clone this repo
+3. Configure git
+
+```bash
+# Tell git who you are
+git config --global user.email "you@email.com"
+git config --global user.name "Your Name"
+
+# other useful git configs
+git config --global --add --bool push.autoSetupRemote true
+```
+
+4. Clone this repo
 
 ```bash
 git clone git@github.com:averypelle/config.git
 ```
 
-4. [Install Homebrew](https://brew.sh/)
+5. [Install Homebrew](https://brew.sh/)
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-5. Install [Alacritty terminal](https://github.com/alacritty/alacritty).
+6. Install [Alacritty terminal](https://github.com/alacritty/alacritty).
 
 ```bash
 brew install alacritty
@@ -67,9 +78,9 @@ brew install alacritty
 
 You will have to navigate to Settings > Privacy & Security > Scroll down and allow Alacritty to run.
 
-6. Install the [MonoLisa](https://www.monolisa.dev/) font
+7. Install the [MonoLisa](https://www.monolisa.dev/) font
 
-7. Sync the configs
+8. Sync the configs
 
 ```bash
 ./sync.sh
