@@ -24,14 +24,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# ----- PATH -----
+# ----- pipenv -----
 
-# pipenv
+# Add pipenv to PATH
 export PATH=$HOME/.local/bin:$PATH
-
-# Yarn global packages
-
-export PATH="$(yarn global bin):$PATH"
 
 # ----- pyenv -----
 
@@ -48,6 +44,10 @@ eval "$(pyenv virtualenv-init -)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
+
+# ----- Yarn global packages -----
+
+export PATH="$(yarn global bin):$PATH"
 
 # ----- aliases -----
 
