@@ -24,10 +24,14 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# ----- pipenv -----
+# ----- PATH -----
 
-# Add pipenv to PATH
+# pipenv
 export PATH=$HOME/.local/bin:$PATH
+
+# Yarn global packages
+
+export PATH="$(yarn global bin):$PATH"
 
 # ----- pyenv -----
 
