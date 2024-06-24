@@ -90,6 +90,22 @@ You will have to navigate to Settings > Privacy & Security > Scroll down and all
 
 See [this guide](https://github.com/ScienceIO/onboarding) for setting up Python, NodeJS, AWS, etc.
 
+## Node Setup
+
+1. Install Node Version Manager (NVM) [from here](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+
+2. Install Node. Note that this will install the latest version of Node, which will become the default version for `nvm`.
+
+```bash
+nvm install node
+```
+
+3. Install Yarn
+
+```bash
+npm install -g yarn
+```
+
 ## Peripherals
 
 - [Logi Options](https://www.logitech.com/en-us/software/logi-options-plus.html) for [my mouse](https://www.logitech.com/en-us/products/mice/mx-master-3s.910-006558.html).
