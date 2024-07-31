@@ -78,9 +78,11 @@ brew install alacritty
 
 You will have to navigate to Settings > Privacy & Security > Scroll down and allow Alacritty to run.
 
-7. Install the [MonoLisa](https://www.monolisa.dev/) font
+7. Install [oh-my-zsh](https://ohmyz.sh/)
 
-8. Sync the configs
+8. Install the [MonoLisa](https://www.monolisa.dev/) font
+
+9. Sync the configs
 
 ```bash
 ./sync.sh
