@@ -88,11 +88,23 @@ You will have to navigate to Settings > Privacy & Security > Scroll down and all
 ./sync.sh
 ```
 
+# Programming Languages and CLI tools that I use
+
 ## Python Setup
 
-See [this guide](https://github.com/ScienceIO/onboarding) for setting up Python, NodeJS, AWS, etc.
+I use [uv](https://github.com/astral-sh/uv?tab=readme-ov-file#installation) to install and manage python. It's really convenient and fast. Follow the linked instructions to install it. Note that `uv` has a dependency on `rust`, so you will need to install that as well.
 
-## Node Setup
+I alias `uv run python` to `py` in my `.zshrc` file because I like it.
+
+Install the latest version of Python with `uv`
+
+```bash
+uv python install 3.12 # latest version as of writing
+```
+
+## Node
+
+### Setup
 
 1. Install Node Version Manager (NVM) [from here](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
 

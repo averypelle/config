@@ -1,10 +1,10 @@
 # ----- AVERY'S MAC TERMINAL CONFIG -----
 
 # Remove user in prompt
-# export DEFAULT_USER="$(whoami)"
+export DEFAULT_USER="$(whoami)"
 
 # Set locale
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # ----- oh-my-zsh -----
 
@@ -24,16 +24,9 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# ----- pipenv -----
+# ----- rust -----
 
-# Add pipenv to PATH
-export PATH=$HOME/.local/bin:$PATH
-
-# ----- pyenv -----
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+source $HOME/.cargo/env
 
 # ----- nvm -----
 
@@ -50,8 +43,6 @@ export PATH="$(yarn global bin):$PATH"
 alias aa="git add --all"
 alias ca="git commit --amend --no-edit"
 alias gcm="git checkout main"
+alias py="uv run python"
 alias stat="git status"
-alias py="pipenv run"
-alias sa="source .venv/bin/activate"
-alias da="deactivate"
 alias env="dotenv-vault"
