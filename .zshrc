@@ -26,7 +26,8 @@ source $ZSH/oh-my-zsh.sh
 
 # ----- sublime text -----
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
-export EDITOR="subl -n -w"
+export EDITOR="subl"
+export VISUAL="subl"
 
 # ----- aliases -----
 
