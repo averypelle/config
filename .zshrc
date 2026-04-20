@@ -37,3 +37,6 @@ export UV_ENV_FILE=".env"
 # Install NVM
 # Install bun
 # install uv
+
+# Configure Sublime Text as default editor"
+export EDITOR="subl -n -w"
