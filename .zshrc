@@ -24,6 +24,10 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
+# ----- sublime text -----
+export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
+export EDITOR="subl -n -w"
+
 # ----- aliases -----
 
 alias aa="git add --all"
@@ -36,8 +40,4 @@ export UV_ENV_FILE=".env"
 # Install Rust
 # Install NVM
 # Install bun
-# install uv
-
-# ----- Sublime Text -----
-export PATH="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:$PATH"
-export EDITOR="subl -n -w"
+# Install uv
