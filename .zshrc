@@ -38,5 +38,6 @@ export UV_ENV_FILE=".env"
 # Install bun
 # install uv
 
-# Configure Sublime Text as default editor"
+# ----- Sublime Text -----
+export PATH="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin:$PATH"
 export EDITOR="subl -n -w"
