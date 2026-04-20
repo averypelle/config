@@ -5,3 +5,4 @@
 cp avery.zsh-theme ~/.oh-my-zsh/custom/themes/avery.zsh-theme
 cp .zshrc ~/.zshrc
 cp .alacritty.toml ~/.alacritty.toml
+# cp config.ghostty "$HOME/Library/Application Support/com.mitchellh.ghostty/config"

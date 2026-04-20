@@ -6,10 +6,10 @@ This repo contains my preferred new computer environment setup and shell configu
 
 This repo depends on the following tools being installed on your system
 
-- git
-- zsh
-- oh-my-zsh
-- alacritty
+* git
+* zsh
+* oh-my-zsh
+* ghostty
 
 ## To sync your config with this repo
 
@@ -23,7 +23,7 @@ Run the following commands
 
 Here is an image of the terminal after the configurations have been applied
 
-![terminal](./terminal.png)
+![terminal](./terminal.webp)
 
 # Getting started on a new Mac
 
@@ -31,23 +31,31 @@ Here is an image of the terminal after the configurations have been applied
 
 1. Download [Spotify](https://www.spotify.com/us/download/mac/) and queue up some tunes. This might take a while.
 
-2. Download [Arc Browser](https://arc.net/).
+2. Download [Dia Browser](https://www.diabrowser.com/).
 
 3. Download and install [VSCode](https://code.visualstudio.com/download). Log In and make sure Settings Sync is on.
 
 4. Get 1Password set up. [Desktop app](https://1password.com/downloads/mac/) and [browser extension](https://1password.com/downloads/browser-extension/).
 
+5. Install [Claude Code](https://docs.claude.com/en/docs/claude-code/overview).
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
+
 ## Coding Setup
 
-1. Generate a new SSH key for this computer and add it to GitHub. [Follow the guide here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui).
+1. Generate a new SSH key for this computer and add it to the ssh-agent. [Follow the GitHub guide here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
-2. Install Xcode Command Line Tools
+2. Add the new SSH key to your GitHub account. [Follow the GitHub guide here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui).
+
+3. Install Xcode Command Line Tools
 
 ```bash
 xcode-select --install
 ```
 
-3. Configure git
+4. Configure git
 
 ```bash
 # Tell git who you are
@@ -58,31 +66,29 @@ git config --global user.name "Your Name"
 git config --global --add --bool push.autoSetupRemote true
 ```
 
-4. Clone this repo
+5. Clone this repo
 
 ```bash
 git clone git@github.com:averypelle/config.git
 ```
 
-5. [Install Homebrew](https://brew.sh/)
+6. [Install Homebrew](https://brew.sh/)
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-6. Install [Alacritty terminal](https://github.com/alacritty/alacritty).
+7. Install [Ghostty terminal](https://ghostty.org/).
 
 ```bash
-brew install alacritty
+brew install --cask ghostty
 ```
 
-You will have to navigate to Settings > Privacy & Security > Scroll down and allow Alacritty to run.
+8. Install [oh-my-zsh](https://ohmyz.sh/)
 
-7. Install [oh-my-zsh](https://ohmyz.sh/)
+9. Install the [MonoLisa](https://www.monolisa.dev/) font
 
-8. Install the [MonoLisa](https://www.monolisa.dev/) font
-
-9. Sync the configs
+10. Sync the configs
 
 ```bash
 ./sync.sh
@@ -94,36 +100,24 @@ You will have to navigate to Settings > Privacy & Security > Scroll down and all
 
 I use [uv](https://github.com/astral-sh/uv?tab=readme-ov-file#installation) to install and manage python. It's really convenient and fast. Follow the linked instructions to install it. Note that `uv` has a dependency on `rust`, so you will need to install that as well.
 
-I alias `uv run python` to `py` in my `.zshrc` file because I like it.
-
 Install the latest version of Python with `uv`
 
 ```bash
 uv python install 3.12 # latest version as of writing
 ```
 
-## Node
+## JavaScript / TypeScript
 
-### Setup
-
-1. Install Node Version Manager (NVM) [from here](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
-
-2. Install Node. Note that this will install the latest version of Node, which will become the default version for `nvm`.
+I use [Bun](https://bun.com/) as my JavaScript runtime and package manager.
 
 ```bash
-nvm install node
-```
-
-3. Install Yarn
-
-```bash
-npm install -g yarn
+curl -fsSL https://bun.sh/install | bash
 ```
 
 ## Peripherals
 
-- [Logi Options](https://www.logitech.com/en-us/software/logi-options-plus.html) for [my mouse](https://www.logitech.com/en-us/products/mice/mx-master-3s.910-006558.html).
+* [Logi Options](https://www.logitech.com/en-us/software/logi-options-plus.html) for [my mouse](https://www.logitech.com/en-us/products/mice/mx-master-3s.910-006558.html).
 
 ## Work Apps
 
-- Notion, Figma, Zoom, Slack.
+* Notion, Figma, Zoom, Slack.

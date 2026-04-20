@@ -24,25 +24,16 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# ----- rust -----
-
-source $HOME/.cargo/env
-
-# ----- nvm -----
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-
-# ----- yarn -----
-
-export PATH="$(yarn global bin):$PATH"
-
 # ----- aliases -----
 
 alias aa="git add --all"
 alias ca="git commit --amend --no-edit"
 alias gcm="git checkout main"
-alias py="uv run python"
 alias stat="git status"
-alias env="dotenv-vault"
+
+export UV_ENV_FILE=".env"
+
+# Install Rust
+# Install NVM
+# Install bun
+# install uv
