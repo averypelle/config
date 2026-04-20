@@ -9,7 +9,7 @@ This repo depends on the following tools being installed on your system
 - git
 - zsh
 - oh-my-zsh
-- alacritty
+- ghostty
 
 ## To sync your config with this repo
 
@@ -23,7 +23,7 @@ Run the following commands
 
 Here is an image of the terminal after the configurations have been applied
 
-![terminal](./terminal.png)
+![terminal](./terminal.webp)
 
 # Getting started on a new Mac
 
@@ -31,11 +31,17 @@ Here is an image of the terminal after the configurations have been applied
 
 1. Download [Spotify](https://www.spotify.com/us/download/mac/) and queue up some tunes. This might take a while.
 
-2. Download [Arc Browser](https://arc.net/).
+2. Download [Dia Browser](https://www.diabrowser.com/).
 
 3. Download and install [VSCode](https://code.visualstudio.com/download). Log In and make sure Settings Sync is on.
 
 4. Get 1Password set up. [Desktop app](https://1password.com/downloads/mac/) and [browser extension](https://1password.com/downloads/browser-extension/).
+
+5. Install [Claude Code](https://docs.claude.com/en/docs/claude-code/overview).
+
+```bash
+npm install -g @anthropic-ai/claude-code
+```
 
 ## Coding Setup
 
@@ -70,13 +76,11 @@ git clone git@github.com:averypelle/config.git
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-6. Install [Alacritty terminal](https://github.com/alacritty/alacritty).
+6. Install [Ghostty terminal](https://ghostty.org/).
 
 ```bash
-brew install alacritty
+brew install --cask ghostty
 ```
-
-You will have to navigate to Settings > Privacy & Security > Scroll down and allow Alacritty to run.
 
 7. Install [oh-my-zsh](https://ohmyz.sh/)
 
@@ -94,30 +98,18 @@ You will have to navigate to Settings > Privacy & Security > Scroll down and all
 
 I use [uv](https://github.com/astral-sh/uv?tab=readme-ov-file#installation) to install and manage python. It's really convenient and fast. Follow the linked instructions to install it. Note that `uv` has a dependency on `rust`, so you will need to install that as well.
 
-I alias `uv run python` to `py` in my `.zshrc` file because I like it.
-
 Install the latest version of Python with `uv`
 
 ```bash
 uv python install 3.12 # latest version as of writing
 ```
 
-## Node
+## JavaScript / TypeScript
 
-### Setup
-
-1. Install Node Version Manager (NVM) [from here](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
-
-2. Install Node. Note that this will install the latest version of Node, which will become the default version for `nvm`.
+I use [Bun](https://bun.com/) as my JavaScript runtime and package manager.
 
 ```bash
-nvm install node
-```
-
-3. Install Yarn
-
-```bash
-npm install -g yarn
+curl -fsSL https://bun.sh/install | bash
 ```
 
 ## Peripherals

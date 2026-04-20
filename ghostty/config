@@ -1,0 +1,5 @@
+background-opacity = 0.8
+font-family = "MonoLisa"
+theme = "Mariana"
+
+keybind = shift+enter=text:\x1b\r

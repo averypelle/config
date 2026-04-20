@@ -43,6 +43,67 @@ export PATH="$(yarn global bin):$PATH"
 alias aa="git add --all"
 alias ca="git commit --amend --no-edit"
 alias gcm="git checkout main"
-alias py="uv run python"
+# alias py="uv run python"
 alias stat="git status"
 alias env="dotenv-vault"
+# alias gitclear="BRANCH=(git branch --show-current) && gcm && git pull && git branch -d $BRANCH"
+# alias gitmain="BRANCH=(git branch --show-current) && gcm && git pull && git checkout $BRANCH"
+
+. "$HOME/.cargo/env"
+
+# pnpm
+export PNPM_HOME="/Users/avery/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
+
+# sst
+export PATH=/Users/avery/.sst/bin:$PATH
+
+# bun completions
+[ -s "/Users/avery/.bun/_bun" ] && source "/Users/avery/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+
+# Added by Antigravity
+export PATH="/Users/avery/.antigravity/antigravity/bin:$PATH"
+
+. "$HOME/.local/bin/env"
+
+export UV_ENV_FILE=".env"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/avery/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# >>> chapter-agents >>>
+# Prefer the current worktree copy, fall back to main checkout via
+# `git rev-parse --git-common-dir`. Re-sources on every invocation so
+# edits to chapter-agents.sh are picked up immediately.
+chapter-agents() {
+  local script toplevel common_dir main_root
+  toplevel="$(git rev-parse --show-toplevel 2>/dev/null)"
+  if [[ -n "$toplevel" && -f "$toplevel/chapter-agents/chapter-agents.sh" ]]; then
+    script="$toplevel/chapter-agents/chapter-agents.sh"
+  else
+    common_dir="$(git rev-parse --git-common-dir 2>/dev/null)"
+    if [[ -n "$common_dir" ]]; then
+      main_root="$(dirname "$(realpath "$common_dir")")"
+      [[ -f "$main_root/chapter-agents/chapter-agents.sh" ]] && script="$main_root/chapter-agents/chapter-agents.sh"
+    fi
+  fi
+  if [[ -z "${script:-}" ]]; then
+    echo "chapter-agents: must be run from inside a Chapter checkout" >&2
+    return 1
+  fi
+  source "$script"
+  _ca_dispatch "$@"
+}
+# <<< chapter-agents <<<
