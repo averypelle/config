@@ -29,31 +29,30 @@ Here is an image of the terminal after the configurations have been applied
 
 ## My Apps
 
-1. Download [Spotify](https://www.spotify.com/us/download/mac/) and queue up some tunes. This might take a while.
+* Music: [Spotify](https://www.spotify.com/us/download/mac/). Download and queue up some tunes. This might take a while.
 
-2. Download [Dia Browser](https://www.diabrowser.com/).
+* Browser: [Dia Browser](https://www.diabrowser.com/)
 
-3. Download and install [VSCode](https://code.visualstudio.com/download). Log In and make sure Settings Sync is on.
+* Editor: [Sublime Text](https://www.sublimetext.com/)
 
-4. Get 1Password set up. [Desktop app](https://1password.com/downloads/mac/) and [browser extension](https://1password.com/downloads/browser-extension/).
+* Passwords: 1Password [Desktop app](https://1password.com/downloads/mac/) and [browser extension](https://1password.com/downloads/browser-extension/).
 
-5. Install [Claude Code](https://docs.claude.com/en/docs/claude-code/overview).
+* Terminal: [Ghostty](https://ghostty.org/)
 
-```bash
-npm install -g @anthropic-ai/claude-code
-```
+* Peripherals: [Logi Options](https://www.logitech.com/en-us/software/logi-options-plus) *sigh*.
 
-## Coding Setup
 
-1. Generate a new SSH key for this computer and add it to the ssh-agent. [Follow the GitHub guide here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+## Development Environment Setup
 
-2. Add the new SSH key to your GitHub account. [Follow the GitHub guide here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui).
-
-3. Install Xcode Command Line Tools
+1. . Install Xcode Command Line Tools
 
 ```bash
 xcode-select --install
 ```
+
+2. Generate a new SSH key for this computer and add it to the ssh-agent. [Follow the GitHub guide here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+
+3. Add the new SSH key to your GitHub account. [Follow the GitHub guide here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui).
 
 4. Configure git
 
@@ -72,52 +71,22 @@ git config --global --add --bool push.autoSetupRemote true
 git clone git@github.com:averypelle/config.git
 ```
 
-6. [Install Homebrew](https://brew.sh/)
+6. Install [oh-my-zsh](https://ohmyz.sh/)
 
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
+7. Install the [MonoLisa](https://www.monolisa.dev/) font
 
-7. Install [Ghostty terminal](https://ghostty.org/).
-
-```bash
-brew install --cask ghostty
-```
-
-8. Install [oh-my-zsh](https://ohmyz.sh/)
-
-9. Install the [MonoLisa](https://www.monolisa.dev/) font
-
-10. Sync the configs
+8. Sync the configs
 
 ```bash
 ./sync.sh
 ```
 
-# Programming Languages and CLI tools that I use
+## Programming Language Setup
 
-## Python Setup
+* Python: [uv](https://docs.astral.sh/uv/) `curl -LsSf https://astral.sh/uv/install.sh | sh`
 
-I use [uv](https://github.com/astral-sh/uv?tab=readme-ov-file#installation) to install and manage python. It's really convenient and fast. Follow the linked instructions to install it. Note that `uv` has a dependency on `rust`, so you will need to install that as well.
-
-Install the latest version of Python with `uv`
-
-```bash
-uv python install 3.12 # latest version as of writing
-```
-
-## JavaScript / TypeScript
-
-I use [Bun](https://bun.com/) as my JavaScript runtime and package manager.
-
-```bash
-curl -fsSL https://bun.sh/install | bash
-```
-
-## Peripherals
-
-* [Logi Options](https://www.logitech.com/en-us/software/logi-options-plus.html) for [my mouse](https://www.logitech.com/en-us/products/mice/mx-master-3s.910-006558.html).
+* TypeScript: [bun](https://bun.com/) `curl -fsSL https://bun.sh/install | bash`
 
 ## Work Apps
 
-* Notion, Figma, Zoom, Slack.
+* Notion, Figma, Slack.
