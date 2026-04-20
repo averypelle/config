@@ -6,10 +6,10 @@ This repo contains my preferred new computer environment setup and shell configu
 
 This repo depends on the following tools being installed on your system
 
-- git
-- zsh
-- oh-my-zsh
-- ghostty
+* git
+* zsh
+* oh-my-zsh
+* ghostty
 
 ## To sync your config with this repo
 
@@ -45,15 +45,17 @@ npm install -g @anthropic-ai/claude-code
 
 ## Coding Setup
 
-1. Generate a new SSH key for this computer and add it to GitHub. [Follow the guide here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui).
+1. Generate a new SSH key for this computer and add it to the ssh-agent. [Follow the GitHub guide here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
-2. Install Xcode Command Line Tools
+2. Add the new SSH key to your GitHub account. [Follow the GitHub guide here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?tool=webui).
+
+3. Install Xcode Command Line Tools
 
 ```bash
 xcode-select --install
 ```
 
-3. Configure git
+4. Configure git
 
 ```bash
 # Tell git who you are
@@ -64,29 +66,29 @@ git config --global user.name "Your Name"
 git config --global --add --bool push.autoSetupRemote true
 ```
 
-4. Clone this repo
+5. Clone this repo
 
 ```bash
 git clone git@github.com:averypelle/config.git
 ```
 
-5. [Install Homebrew](https://brew.sh/)
+6. [Install Homebrew](https://brew.sh/)
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-6. Install [Ghostty terminal](https://ghostty.org/).
+7. Install [Ghostty terminal](https://ghostty.org/).
 
 ```bash
 brew install --cask ghostty
 ```
 
-7. Install [oh-my-zsh](https://ohmyz.sh/)
+8. Install [oh-my-zsh](https://ohmyz.sh/)
 
-8. Install the [MonoLisa](https://www.monolisa.dev/) font
+9. Install the [MonoLisa](https://www.monolisa.dev/) font
 
-9. Sync the configs
+10. Sync the configs
 
 ```bash
 ./sync.sh
@@ -114,8 +116,8 @@ curl -fsSL https://bun.sh/install | bash
 
 ## Peripherals
 
-- [Logi Options](https://www.logitech.com/en-us/software/logi-options-plus.html) for [my mouse](https://www.logitech.com/en-us/products/mice/mx-master-3s.910-006558.html).
+* [Logi Options](https://www.logitech.com/en-us/software/logi-options-plus.html) for [my mouse](https://www.logitech.com/en-us/products/mice/mx-master-3s.910-006558.html).
 
 ## Work Apps
 
-- Notion, Figma, Zoom, Slack.
+* Notion, Figma, Zoom, Slack.
